@@ -20,13 +20,7 @@ export class Event {
 
         const regButton = this.element.querySelector('.event_reg_button');
         textRatingButton.addEventListener('click', async () => {
-<<<<<<< HEAD
-            //await this.sendRating();
-x
-            
-=======
             //open registration form;
->>>>>>> 0b75fbd0f42f8b0a799713bc8cb96175bae79e60
         });
     }
 
