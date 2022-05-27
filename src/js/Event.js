@@ -1,25 +1,26 @@
 export class Event {
-    constructor(header) {
-        this.header = header;
+    constructor(name, date) {
+        this.name = name;
+        this.date = date;
         this.element = document.createElement('div');
-        this.element.classList.add('additional_event');
+        this.element.classList.add('event');
         this.update();
     }
 
     update() {
 
         this.element.innerHTML = `
-        <h1 class="additional_event_name"></h1>
-        <div class="additional_event_description">0</div>
-        <button class = "additional_event_more_button">More info...</button>
+
+        <img src="${this.image_url}" alt="event img" class="event_img">
+            <h1 class="event_name">${this.name}</h1>
+            <p class="event_description">${this.description}</p>
+            <button class="event_reg_button">Register</button>
         `
 
-        this.element.querySelector('.event__header').textContent = this.header;
 
-
-        const eventMoreInfo = this.element.querySelector('.event_more_button');
+        const regButton = this.element.querySelector('.event_reg_button');
         textRatingButton.addEventListener('click', async () => {
-            //await this.sendRating();
+            //open registration form;
         });
     }
 

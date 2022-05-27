@@ -22,7 +22,7 @@ body {
     //background-color: $text-color;
     margin: 0 auto;
     padding: 0;
-    max-width: $max-width;
+    // max-width: $max-width;
 
 }
 
@@ -31,6 +31,10 @@ body {
     padding: 0.5em;
     display: flex;
     justify-content: space-between;
+
+    &_h1 {
+        padding: 0.5em;
+    }
 
 
 
@@ -50,7 +54,7 @@ body {
         // }
 
         &_item {
-            padding: 2em;
+            padding: 0.5em;
 
             &_link {
                 text-decoration: none;
