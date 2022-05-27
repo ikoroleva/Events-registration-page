@@ -20,6 +20,8 @@ export class Event {
         const eventMoreInfo = this.element.querySelector('.event_more_button');
         textRatingButton.addEventListener('click', async () => {
             //await this.sendRating();
+x
+            
         });
     }
 
