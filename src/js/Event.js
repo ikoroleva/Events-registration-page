@@ -39,18 +39,5 @@ export class Event {
         console.log(response);
     }
 
-    setRating(stars, rating) {
-
-        this.element.querySelector('.rating__value').textContent = rating;
-
-        for (let i = 0; i < stars.length; i++) {
-            if (i < rating) {
-                stars[i].classList.add('rating__star--on');
-            } else {
-                stars[i].classList.remove('rating__star--on');
-            }
-        }
-    }
-
 
 }
