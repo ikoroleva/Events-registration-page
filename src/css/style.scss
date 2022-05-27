@@ -163,12 +163,15 @@ body {
 .inputs_modal {
     display: flex;
     flex-direction: column;
+    align-self: center;
     margin: 2rem;
-    width: 8rem;
+  
 }
 
 .inputs_modal input {
     margin: 5px;
+    width: 20rem;
+
 
 
 }
