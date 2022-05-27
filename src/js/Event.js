@@ -110,8 +110,9 @@ export class Event {
                     if (res.status !== 200){
 
                         sucMessage.style.display = 'none';
-
                         errMessage.style.display = 'block';
+
+                       errMessage.textContent = `Error ${res.status} ${res.statusText}`;
                         
                     } else {
                         
