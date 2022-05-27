@@ -74,6 +74,23 @@ export class Event {
 
 
 }
+/*'use strict';
+ 
+const button = document.querySelector('.button');
+
+ 
+const datainput = () => {
+ 
+    fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then(json => {
+        quote.innerHTML = `<img src="${json.icon_url}" alt="chuck-norris-joke" />`
+        quote.innerHTML += json.value;
+    });
+}
+ 
+button.addEventListener('click', data);
+
 
         // this.element.innerHTML = `
 
@@ -103,3 +120,4 @@ export class Event {
     //     const response = await res.json();
     //     console.log(response);
     // }
+*/
