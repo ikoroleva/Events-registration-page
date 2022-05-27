@@ -34,7 +34,7 @@ body {
 
     &_h1 {
         padding: 0.5em;
-    
+
     }
 
 
@@ -76,24 +76,26 @@ body {
     }
 }
 
-.header_h1{
+.header_h1 {
     font-size: 2rem;
     margin-left: 3rem;
-   
+
 }
 
-.events{
+.events {
     display: flex;
     align-content: space-between;
-    flex-direction: column ;
+    flex-direction: column;
     padding: 5%;
 }
-.event_image{
- width: 400px;
- border-radius: 8px; 
+
+.event_image,
+.event_modal_img {
+    width: 400px;
+    border-radius: 8px;
 }
 
-.event_card{
+.event_card {
     margin: 1rem 2rem;
     padding: 2rem;
     display: flex;

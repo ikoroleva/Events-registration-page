@@ -38,8 +38,10 @@ export class Event {
         //console.log(events);
 
         this.element.innerHTML = `
-            <h1 class="event_name">${this.name}</h1>
-            <button class="event_reg_button">Register</button>`
+        <h1 class="event_name">${this.name}</h1>
+        <img class="event_image" src="${this.image_url}" alt="Event Photo" width:400px/>
+        <p class="event_about">${this.description} </p>
+        <button class="event_reg_button"> Register </button>`
 
         events.appendChild(this.element);
 
