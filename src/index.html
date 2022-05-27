@@ -44,12 +44,24 @@
                         <input class="input_lastname" type="text" placeholder="Last Name" name="lastname">
                         <input class="input_email" type="email" placeholder="E-Mail" name="email">
                         <input class="input_tel" type="tel" placeholder="Phone Number" name="phone">
+                        <input type="checkbox" name="agree" id="agree" value="yes" />
+                        <label for="agree">I'm old enough to participate</label>
+                        
                         <button class="btn_register">Register</button>
                         <p class="modal-error-text">Error</p>
-                        <p class="modal-success-text">Success</p>
+                        <p class="modal-success-text">Registered</p>
 
                     </div>
                 </div>
+                <div class="p-3">
+                  <form onsubmit="return validateForm(this)" action="" method="post">
+                    <div>
+                  
+                    </div>
+                    </div>
+                      
+                    </form>
+                  </div>`
             </div>
 
 
@@ -62,6 +74,8 @@
         </div>
         <div class="main_additional_events"></div>
     </main>
+    
+    
     <script src="/js/script.js"></script>
 </body>
 

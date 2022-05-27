@@ -187,3 +187,27 @@ body {
 }
 
 // font-family: 'PT Sans Narrow', sans-serif;
+
+//form style
+
+.login_container{
+    
+    display: flex;
+    
+}
+.hide-section{
+    opacity: 0;
+}
+.hide-form{
+    padding: 0%;
+    padding-top: 27px;
+}
+.login-hide{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+label{
+    font-size: 12px;
+    
+}
