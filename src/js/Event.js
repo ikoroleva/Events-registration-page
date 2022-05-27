@@ -2,8 +2,25 @@ export class Event {
     constructor(header) {
         this.header = header;
         this.element = document.createElement('div');
-        this.element.classList.add('event');
+        this.element.classList.add('additional_event');
         this.update();
+    }
+
+    update() {
+
+        this.element.innerHTML = `
+        <h1 class="additional_event_name"></h1>
+        <div class="additional_event_description">0</div>
+        <button class = "additional_event_more_button">More info...</button>
+        `
+
+        this.element.querySelector('.event__header').textContent = this.header;
+
+
+        const eventMoreInfo = this.element.querySelector('.event_more_button');
+        textRatingButton.addEventListener('click', async () => {
+            //await this.sendRating();
+        });
     }
 
     async sendRegistration() {
@@ -34,20 +51,5 @@ export class Event {
         }
     }
 
-    update() {
 
-        this.element.innerHTML = `
-        <h1 class="event_name"></h1>
-        <div class="event_description">0</div>
-        <button class = "event_more_button">More info...</button>
-        `
-
-        this.element.querySelector('.event__header').textContent = this.header;
-
-
-        const eventMoreInfo = this.element.querySelector('.event_more_button');
-        textRatingButton.addEventListener('click', async () => {
-            //await this.sendRating();
-        });
-    }
 }
