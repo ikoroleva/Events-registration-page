@@ -1,27 +1,32 @@
 export class Event {
-    constructor(header) {
-        this.header = header;
+    constructor(name, date) {
+        this.name = name;
+        this.date = date;
         this.element = document.createElement('div');
-        this.element.classList.add('additional_event');
+        this.element.classList.add('event');
         this.update();
     }
 
     update() {
 
         this.element.innerHTML = `
-        <h1 class="additional_event_name"></h1>
-        <div class="additional_event_description">0</div>
-        <button class = "additional_event_more_button">More info...</button>
+
+        <img src="${this.image_url}" alt="event img" class="event_img">
+            <h1 class="event_name">${this.name}</h1>
+            <p class="event_description">${this.description}</p>
+            <button class="event_reg_button">Register</button>
         `
 
-        this.element.querySelector('.event__header').textContent = this.header;
 
-
-        const eventMoreInfo = this.element.querySelector('.event_more_button');
+        const regButton = this.element.querySelector('.event_reg_button');
         textRatingButton.addEventListener('click', async () => {
+<<<<<<< HEAD
             //await this.sendRating();
 x
             
+=======
+            //open registration form;
+>>>>>>> 0b75fbd0f42f8b0a799713bc8cb96175bae79e60
         });
     }
 
@@ -38,19 +43,6 @@ x
         });
         const response = await res.json();
         console.log(response);
-    }
-
-    setRating(stars, rating) {
-
-        this.element.querySelector('.rating__value').textContent = rating;
-
-        for (let i = 0; i < stars.length; i++) {
-            if (i < rating) {
-                stars[i].classList.add('rating__star--on');
-            } else {
-                stars[i].classList.remove('rating__star--on');
-            }
-        }
     }
 
 
