@@ -103,8 +103,26 @@ export class Event {
                         }
                     });
                     console.log(res)
-                    const response = await res.json();
-                    console.log(response);
+
+                    const errMessage = modal.querySelector('.modal-error-text');
+                    const sucMessage = modal.querySelector('.modal-success-text');
+
+                    if (res.status !== 200){
+
+                        sucMessage.style.display = 'none';
+
+                        errMessage.style.display = 'block';
+                        
+                    } else {
+                        
+                        errMessage.style.display = 'none';
+                        sucMessage.style.display = 'block';
+                        const response = await res.json();
+
+                    }
+                    
+                    
+                    //console.log(response);
                 
 
             })
