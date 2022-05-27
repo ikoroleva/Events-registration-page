@@ -21,7 +21,10 @@ const renderElements = (data) => {
         events.appendChild(card);
         card.innerHTML = `
             <h1 class="event_name">${element.name}</h1>
-            <button class="event_reg_button">Register</button>`
+            <img class="event_image" src="${element.image_url}" alt="Event Photo" width:400px/>
+            <p class="event_about">${element.description} </p>
+            <button class="event_reg_button"> Register </button>`
+            
 
     });
 
