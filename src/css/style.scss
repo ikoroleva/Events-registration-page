@@ -128,7 +128,13 @@ body {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal__card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 4rem;
+}
+.modal-content {    
     background-color: #fefefe;
     margin: 15% auto;
     /* 15% from the top and centered */
@@ -153,5 +159,18 @@ body {
     cursor: pointer;
 }
 
+.inputs_modal{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: 8rem;
+    padding-left: 3rem;
 
+}
+
+.inputs_modal input{
+    margin: 5px;
+   
+
+}
 // font-family: 'PT Sans Narrow', sans-serif;
