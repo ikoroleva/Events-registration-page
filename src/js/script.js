@@ -31,7 +31,7 @@ const renderElements = (data) => {
 
     data.forEach((element) => {
 
-        const eventCard = new Event(element.name, element.date, element.description, element.image_url);
+        const eventCard = new Event(element.id, element.name, element.date, element.description, element.image_url);
 
         //eventCard.render();
 

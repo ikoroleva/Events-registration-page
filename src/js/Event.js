@@ -1,5 +1,6 @@
 export class Event {
-    constructor(name, date, description, image_url) {
+    constructor(id, name, date, description, image_url) {
+        this.id = id;
         this.name = name;
         this.date = date;
         this.description = description;
@@ -84,6 +85,48 @@ export class Event {
 
 
             const modalBtn = modal.querySelector('.btn_register');
+
+            modalBtn.addEventListener('click', async () => {
+
+                console.log(modal.querySelector('.input_email').value);
+
+                    const res = await fetch(`https://test-api.codingbootcamp.cz/api/6e2aa2a2/events/${this.id}/registrations`, {
+                        "method": "POST",
+                        "body": JSON.stringify({
+                            "name": modal.querySelector('.input_name').value,
+                            "surname": modal.querySelector('.input_lastname').value,
+                            "email":  modal.querySelector('.input_email').value,
+                            "tel":  modal.querySelector('.input_tel').value,
+                        }),
+                        "headers": {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    console.log(res)
+
+                    const errMessage = modal.querySelector('.modal-error-text');
+                    const sucMessage = modal.querySelector('.modal-success-text');
+
+                    if (res.status !== 200){
+
+                        sucMessage.style.display = 'none';
+
+                        errMessage.style.display = 'block';
+                        
+                    } else {
+                        
+                        errMessage.style.display = 'none';
+                        sucMessage.style.display = 'block';
+                        const response = await res.json();
+
+                    }
+                    
+                    
+                    //console.log(response);
+                
+
+            })
+            
             
 
 
