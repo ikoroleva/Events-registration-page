@@ -43,6 +43,20 @@
                     <input type="tel" placeholder="enter your phone number" name="phone">
                     <button class="btn_register">Register</button>
                 </div>
+                <div class="p-3">
+                  <form onsubmit="return validateForm(this)" action="" method="post">
+                    <div>
+                    <input type="checkbox" name="agree" id="agree" value="yes" />
+                    <label for="agree">I'm old enough to participate</label>
+                    <div style="visibility:hidden; color:red" id="agree_chk_error">
+                    Can't proceed as you didn't agree to the terms!
+                    </div>
+                    </div>
+                      <div>
+                      <input type="submit" name="submit" value="Submit"/>
+                      </div>
+                    </form>
+                  </div>`
             </div>
 
         </div>
